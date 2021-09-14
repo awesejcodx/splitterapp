@@ -1,0 +1,114 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="jquery.js"></script> -->
+    <script src="main.js"></script>
+    <!-- <script defer="defer" src="main1.js"></script> -->
+
+    <title>Splitter</title>
+
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="page-logo">
+        <img src="images/logo.svg" alt="Tip calculator Logo" />
+      </h1>
+    </header>
+    <main id="tip-calculator" class="container">
+      <section id="tip-input">
+        <div class="bill">
+          <h3 class="bill_text">Bill</h3>
+          <div class="bill_input">
+            <div class="bill_icon">
+              <img src="images/icon-dollar.svg" alt="Dollar Icon" />
+            </div>
+            <input
+              type="number"
+              min="0"
+              max="999.99"
+              class="bill-input_form"
+              placeholder="0"
+              value=""
+            />
+          </div>
+        </div>
+        <div class="tip-percent">
+          <h3 class="tip-percent_text">Select Tip %</h3>
+          <div class="tip-percent_container">
+            <button class="btn btn_percent" value="0.05">5%</button>
+            <button class="btn btn_percent" value="0.1">10%</button>
+            <button class="btn btn_percent" value="0.15">15%</button>
+            <button class="btn btn_percent" value="0.25">25%</button>
+            <button class="btn btn_percent" value="0.50">50%</button>
+            <input
+              type="number"
+              class="btn btn_percent btn_percent--custom"
+              placeholder="Custom"
+              min="0"
+              max="99.99"
+              value=""
+            />
+          </div>
+        </div>
+        <div class="people-amount">
+          <h3 class="people-amount_text">
+            Number of People
+            <span
+              id="peopleError"
+              class="people-amount_error"
+              aria-live="assertive"
+              >Can't Be Zero</span
+            >
+          </h3>
+          <div class="people-amount_input">
+            <span><img src="images/icon-person.svg" alt="Person Icon" /></span
+            ><input
+              type="number"
+              min="0"
+              max="99"
+              class="people-amount_form"
+              placeholder="0"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="tip-total">
+        <div class="tip-display">
+          <div class="tip-display_text">
+            <h3 class="tip-display_info">Tip Amount</h3>
+            <h4 class="tip-display_per">/ person</h4>
+          </div>
+          <p class="tip-display_result">
+            <span id="tip-amount_per-person">$0.00</span>
+          </p>
+        </div>
+        <div class="tip-display">
+          <div class="tip-display_text">
+            <h3 class="tip-display_info">Total</h3>
+            <h4 class="tip-display_per">/ person</h4>
+          </div>
+          <p class="tip-display_result">
+            <span id="tip-amount_total">$0.00</span>
+          </p>
+        </div>
+        <button id="resetButton" class="btn btn_reset">RESET</button>
+      </section>
+    </main>
+
+    <div class="attribution">
+    Coded by <a href="#">Sejal</a>.
+  </div>
+  </body>
+</html>
