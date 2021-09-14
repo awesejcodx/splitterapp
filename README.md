@@ -1,0 +1,2 @@
+# splitterapp
+SMC design assignment
