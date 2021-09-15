@@ -43,7 +43,7 @@ $( document ).ready( function () {
       tip = $( this ).val();
     } );
 
-  $( "input" ).bind( "keyup change", function ( e ) {
+  $( "input" ).bind( "keyup change click", function ( e ) {
     inputred();
 
     var cus = parseFloat( $( ".btn_percent--custom" ).val() ) || 0;
